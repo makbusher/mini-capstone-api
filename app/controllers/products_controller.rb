@@ -9,4 +9,14 @@ class ProductsController < ApplicationController
     product = Product.first
     render json: product.as_json
   end
+
+  def second
+    product = Product.second
+    render json: product.as_json
+  end
+
+  def third
+    product = Product.third
+    render json: product.as_json
+  end
 end
