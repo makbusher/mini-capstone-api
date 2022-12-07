@@ -22,7 +22,13 @@ class ProductsController < ApplicationController
   end
 
   def update
-    render json: {message: "hello"}
+    product = Product.find_by(id: params[:id])
+    product.name = "book"
+    product.price = 13
+    product.image_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAx5pM2gp_FtrsLxGgP69Ej1TDb49UXWkgCQ&usqp=CAU"
+    product.description = "a book you can read"
+    product.save
+    render json: product.as_json
   end
 
 end

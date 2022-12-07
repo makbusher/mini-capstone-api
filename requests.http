@@ -15,5 +15,6 @@ Content-type: application/json
   "input_description": "a book you can read"
 }
 
-###
+### products update
+PATCH http://localhost:3000/products/5.json
 
