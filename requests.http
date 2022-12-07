@@ -26,3 +26,6 @@ Content-type: application/json
   "description": "a short book you can read"
 }
 
+### products delete
+DELETE http://localhost:3000/products/5.json
+
