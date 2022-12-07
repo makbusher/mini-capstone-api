@@ -3,14 +3,14 @@ GET http://localhost:3000/all_products.json
 
 ###
 
-GET http://localhost:3000/first_product.json
+GET http://localhost:3000/product/1.json
 
 ###
 
-GET http://localhost:3000/second_product.json
+# GET http://localhost:3000/second_product.json
 
-###
+# ###
 
-GET http://localhost:3000/third_product.json
+# GET http://localhost:3000/third_product.json
 
 
