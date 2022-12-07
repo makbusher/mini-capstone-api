@@ -1,8 +1,19 @@
-###
+### products index
 GET http://localhost:3000/products.json
 
-###
-
+### products show
 GET http://localhost:3000/products/3.json
 
+### products create
+POST http://localhost:3000/products.json
+Content-type: application/json
+
+{
+  "input_name": "book",
+  "input_price": 17,
+  "input_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQdhRokXEL3fzce1c77j3kVq6h8t57lUy1A&usqp=CAU",
+  "input_description": "a book you can read"
+}
+
+###
 
