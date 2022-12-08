@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     products = Product.all
-    render json: product.as_json
+    render json: products.as_json
   end
 
   def show
