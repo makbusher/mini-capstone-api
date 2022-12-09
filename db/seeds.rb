@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+Product.create!([
+  {name: "Vinyl", price: "25.0", image_url: "https://f4.bcbits.com/img/0028859194_10.jpg", description: "Twen's 12 in sea-glass blue vinyl", inventory: nil},
+  {name: "sticker", price: "3.0", image_url: "https://i0.wp.com/hyperallergic-newspack.s3.amazonaws.com/uploads/2022/11/ivoted.jpg?fit=1200%2C900&quality=100&ssl=1", description: "funny 'I voted' sticker", inventory: nil},
+  {name: "shoes", price: "60.0", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc1LY3yrKvMrofrsI01VnJHVr8r2TS7qYwww&usqp=CAU", description: "white shoes you wear on your feet", inventory: nil},
+  {name: "shirt", price: "30.0", image_url: "http://cdn.shopify.com/s/files/1/0097/8966/9434/products/SWZ16_1024x.png?v=1661971741", description: "pink long-sleeve still woozy shirt", inventory: nil},
+  {name: "book", price: "17.0", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQdhRokXEL3fzce1c77j3kVq6h8t57lUy1A&usqp=CAU", description: "a book you can read", inventory: nil},
+  {name: "book", price: "17.0", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQdhRokXEL3fzce1c77j3kVq6h8t57lUy1A&usqp=CAU", description: "a book you can read", inventory: nil},
+  {name: "book", price: "17.0", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQdhRokXEL3fzce1c77j3kVq6h8t57lUy1A&usqp=CAU", description: "a book you can read", inventory: 3},
+  {name: "book", price: "17.0", image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQdhRokXEL3fzce1c77j3kVq6h8t57lUy1A&usqp=CAU", description: "a book you can read", inventory: 3}
+])

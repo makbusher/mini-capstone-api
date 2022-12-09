@@ -17,11 +17,12 @@ class ProductsController < ApplicationController
       name: params[:input_name],
       price: params[:input_price],
       image_url: params[:input_image_url],
-      description: params[:input_description]
+      description: params[:input_description],
+      inventory: params[:input_inventory]
     )
     @product.save
-    # render json: product.as_json
-    render "products/show"
+    render json: @product.as_json
+    # render "products/show"
   end
 
   def update
@@ -30,6 +31,7 @@ class ProductsController < ApplicationController
     product.price = params[:price]
     product.image_url = params[:image_url]
     product.description = params[:description]
+    product.inventory = params[:inventory]
     product.save
     # render json: product.as_json
     render "products/show"

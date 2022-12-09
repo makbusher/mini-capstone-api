@@ -2,7 +2,7 @@
 GET http://localhost:3000/products.json
 
 ### products show
-GET http://localhost:3000/products/2.json
+GET http://localhost:3000/products/5.json
 
 ### products create
 POST http://localhost:3000/products.json
@@ -12,7 +12,8 @@ Content-type: application/json
   "input_name": "book",
   "input_price": 17,
   "input_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYQdhRokXEL3fzce1c77j3kVq6h8t57lUy1A&usqp=CAU",
-  "input_description": "a book you can read"
+  "input_description": "a book you can read",
+  "input_inventory": 3
 }
 
 ### products update
@@ -23,7 +24,8 @@ Content-type: application/json
   "name": "book",
   "price": 20,
   "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAx5pM2gp_FtrsLxGgP69Ej1TDb49UXWkgCQ&usqp=CAU",
-  "description": "a short book you can read"
+  "description": "a short book you can read",
+  "inventory": 2
 }
 
 ### products delete

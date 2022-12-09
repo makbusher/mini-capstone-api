@@ -10,4 +10,5 @@
   is_discounted?: @product.is_discounted?,
   tax: @product.tax,
   total: @product.total
+  inventory: @product.inventory 
 }
