@@ -1,34 +1,38 @@
 class ProductsController < ApplicationController
 
   def index
-    products = Product.all
-    render json: products.as_json
+    @products = Product.all
+    # render json: products.as_json
+    render "products/index"
   end
 
   def show
-    product = Product.find_by(id: params[:id])
-    render json: product.as_json
+    @product = Product.find_by(id: params[:id])
+    # render json: product.as_json(methods: [:friendly_created_at, :is_discounted?, :tax, :total])
+    render "products/show"
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params[:input_name],
       price: params[:input_price],
       image_url: params[:input_image_url],
       description: params[:input_description]
     )
-    product.save
-    render json: product.as_json
+    @product.save
+    # render json: product.as_json
+    render "products/show"
   end
 
   def update
-    product = Product.find_by(id: params[:id])
+    @product = Product.find_by(id: params[:id])
     product.name = params[:name]
     product.price = params[:price]
     product.image_url = params[:image_url]
     product.description = params[:description]
     product.save
-    render json: product.as_json
+    # render json: product.as_json
+    render "products/show"
   end
 
   def destroy
