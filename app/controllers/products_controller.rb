@@ -20,8 +20,11 @@ class ProductsController < ApplicationController
       description: params[:input_description],
       inventory: params[:input_inventory]
     )
-    @product.save
-    render json: @product.as_json
+    if @product.save
+      render json: @product.as_json
+    else 
+      render json: {errors: product.errors.full_messages}, status: :unprocessable_entity
+    end
     # render "products/show"
   end
 
