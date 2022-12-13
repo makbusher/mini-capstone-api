@@ -1,6 +1,5 @@
 {
   id: @product.id,
-  image_url: @product.image_url,
   name: @product.name,
   price: @product.price,
   description: @product.description,
@@ -11,5 +10,6 @@
   tax: @product.tax,
   total: @product.total,
   inventory: @product.inventory,
-  supplier: @product.supplier 
+  supplier: @product.supplier,
+  images: @product.images
 }
