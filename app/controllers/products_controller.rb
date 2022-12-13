@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
     product.image_url = params[:image_url]
     product.description = params[:description]
     product.inventory = params[:inventory]
+    product.supplier_id = params[:supplier_id]
     if product.save
       render json: product.as_json
     # render "products/show"

@@ -17,17 +17,18 @@ Content-type: application/json
 }
 
 ### products update
-PATCH http://localhost:3000/products/6.json
+PATCH http://localhost:3000/products/11.json
 Content-type: application/json
 
 {
-  "name": "short story",
-  "price": 16,
-  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAx5pM2gp_FtrsLxGgP69Ej1TDb49UXWkgCQ&usqp=CAU",
-  "description": "a short book you can read",
-  "inventory": 2
+  "name": "Book",
+  "price": 17,
+  "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBstXAmkzVK-Ze6Lg_gZMVl57-7Oyvpw6QA&usqp=CAU",
+  "description": "a book you can read",
+  "inventory": 5,
+  "supplier_id": 3
 }
 
 ### products delete
-DELETE http://localhost:3000/products/5.json
+DELETE http://localhost:3000/products/8.json
 
