@@ -15,10 +15,10 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(
-      name: params[:input_name],
-      price: params[:input_price],
-      description: params[:input_description],
-      inventory: params[:input_inventory]
+      name: params[:name],
+      price: params[:price],
+      description: params[:description],
+      inventory: params[:inventory]
       # supplier_id: 
     )
     if @product.save
