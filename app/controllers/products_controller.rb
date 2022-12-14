@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
+    pp current_user
     @products = Product.all
     # render json: products.as_json
     render "products/index"
@@ -18,7 +19,7 @@ class ProductsController < ApplicationController
       price: params[:input_price],
       description: params[:input_description],
       inventory: params[:input_inventory]
-      supplier_id: 
+      # supplier_id: 
     )
     if @product.save
       # params[:images].each do |image|

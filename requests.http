@@ -1,8 +1,15 @@
 ### products index
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzExMzA0NTd9.oP7P0gQ0yb10_z6m6x2BfNIQE6J93Ug4SjAWiO3JAUU
 
 ### products show
 GET http://localhost:3000/products/10.json
+Content-Type: application/json
+
+{
+  "email": "jake@email.com",
+  "password": "password"
+}
 
 ### products create
 POST http://localhost:3000/products.json
