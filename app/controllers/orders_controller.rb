@@ -3,10 +3,10 @@ class OrdersController < ApplicationController
 
     product = Product.find_by(id: params[:product_id])
     subtotal = product.price * params[:quantity]
-
     tax_rate = 0.09
     tax = subtotal * tax_rate
     total = subtotal + tax
+    
     if current_user
       order = Order.new(
       user_id: current_user.id, 
@@ -36,7 +36,7 @@ class OrdersController < ApplicationController
   end
 
   def index 
-    orders = Order.all
+    orders = Order.where(user_id: current_user.id)
     render json: orders.as_json
   end
 end
