@@ -25,10 +25,16 @@ class OrdersController < ApplicationController
       render json: {message: "You must login first"}
     end
   end
+
   def show 
     order = Order.find_by(id: params[:id])
-    render json: order.as_json
+    if current_user.id == order.user_id
+      render json: order.as_json
+    else 
+      render json: {message: "Please login"}
+    end
   end
+
   def index 
     orders = Order.all
     render json: orders.as_json

@@ -71,6 +71,7 @@ Content-Type: application/json
 
 ### SHOW ORDER
 GET http://localhost:3000/orders/2.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzEyMTUwNzh9.uJRapavLdIWixuuZvlkf8U47Hh_JVBNTi0QVsYU_khg
 
 ### SHOW ORDERS
 GET http://localhost:3000/orders.json 
