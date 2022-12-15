@@ -1,12 +1,18 @@
 class OrdersController < ApplicationController
-  def create 
+  before_action :authenticate_user
 
+  def index 
+    orders = Order.where(user_id: current_user.id)
+    render json: orders.as_json
+  end
+
+  def create 
     product = Product.find_by(id: params[:product_id])
     subtotal = product.price * params[:quantity]
     tax_rate = 0.09
     tax = subtotal * tax_rate
     total = subtotal + tax
-    
+
     if current_user
       order = Order.new(
       user_id: current_user.id, 
@@ -17,7 +23,7 @@ class OrdersController < ApplicationController
       total: total
       )
       if order.save
-        render json: order.as_json(methods: [:subtotal, :tax, :total])
+        render json: order.as_json
       else
         render json: order.error.full_messages
       end
@@ -35,8 +41,4 @@ class OrdersController < ApplicationController
     end
   end
 
-  def index 
-    orders = Order.where(user_id: current_user.id)
-    render json: orders.as_json
-  end
 end

@@ -13,14 +13,15 @@ Content-Type: application/json
 
 ### products create
 POST http://localhost:3000/products.json
-# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzExMzA0NTd9.oP7P0gQ0yb10_z6m6x2BfNIQE6J93Ug4SjAWiO3JAUU
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzEyMjIzMDh9.qth4eUnFS7VrB3u8gMt4w5pAjNKLJYYwTWTpmjNjPbM
 Content-type: application/json
 
 {
-  "name": "book",
-  "price": 17,
-  "description": "a book you can read",
-  "inventory": 3
+  "name": "hat",
+  "price": 15,
+  "description": "a fun hat you wear on your head",
+  "inventory": 5,
+  "supplier_id": 4
 }
 
 ### products update
@@ -65,12 +66,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzEyMTUwN
 Content-Type: application/json
 
 {
-  "product_id": 2,
+  "product_id": 10,
   "quantity": 1
 }
 
 ### SHOW ORDER
-GET http://localhost:3000/orders/2.json 
+GET http://localhost:3000/orders/12.json 
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NzEyMTUwNzh9.uJRapavLdIWixuuZvlkf8U47Hh_JVBNTi0QVsYU_khg
 
 ### SHOW ORDERS
