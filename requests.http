@@ -45,8 +45,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Jake",
-  "email": "jake@email.com",
+  "name": "Liz",
+  "email": "liz@email.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -56,19 +56,15 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "jake@email.com",
+  "email": "maria@email.com",
   "password": "password"
 }
 
 ### ORDERS CREATE
 POST http://localhost:3000/orders.json 
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjcxNjQ3NDc1fQ.hcGhhAySGOpXraMJOgfyFMdxF7cYrhdxZCQrkTpT2eQ
 Content-Type: application/json
 
-{
-  "product_id": 10,
-  "quantity": 1
-}
 
 ### SHOW ORDER
 GET http://localhost:3000/orders/12.json 
@@ -80,13 +76,18 @@ Authorization: Bearer
 
 ### create cart
 POST http://localhost:3000/carted_products.json 
-Authorization: Bearer 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjcxNjQzNjYyfQ.fnbWPdPBBaE3zuLuFNxnzrwY-krjqPj9KVSqdNbYOTU
 Content-Type: application/json
 
 {
-  "user_id": 3,
-  "product_id": 10,
-  "quantity": 1,
-  "status": "ordered",
-  "order_id": 13
+  "product_id": 7,
+  "quantity": 1
 }
+
+### carted products index
+GET http://localhost:3000/carted_products.json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjcxNjQ0MjM4fQ.YEwOBjGEoroeCXWUuwf2AmhkriSBsedM4TAkaoXBTeE
+
+### delete from cart
+DELETE http://localhost:3000/carted_products/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMSwiZXhwIjoxNjcxNjQ0MjM4fQ.YEwOBjGEoroeCXWUuwf2AmhkriSBsedM4TAkaoXBTeE
