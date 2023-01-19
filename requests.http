@@ -13,14 +13,14 @@ Content-Type: application/json
 
 ### products create
 POST http://localhost:3000/products.json
-# Authorization: Bearer 
+Authorization: Bearer 
 Content-type: application/json
 
 {
-  "name": "hat",
-  "price": 15,
-  "description": "a fun hat you wear on your head",
-  "inventory": 5,
+  "name": "chair",
+  "price": 60,
+  "description": "a chair you can sit in",
+  "inventory": 10,
   "supplier_id": 4
 }
 
@@ -45,10 +45,11 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "Liz",
-  "email": "liz@email.com",
+  "name": "Tyler",
+  "email": "tyler@email.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "admin": true
 }
 
 ### SESSIONS CREATE (login)
@@ -56,7 +57,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "maria@email.com",
+  "email": "tyler@email.com",
   "password": "password"
 }
 
